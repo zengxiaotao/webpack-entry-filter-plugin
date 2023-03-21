@@ -1,12 +1,16 @@
 {
   "name": "webpack-entry-filter-plugin",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "file": [
+  "files": [
     "lib"
   ],
+  "repository": {
+    "url": "https://github.com/zengxiaotao/webpack-entry-filter-plugin",
+    "type": "git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
