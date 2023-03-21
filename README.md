@@ -21,14 +21,17 @@ events/upgrade
 after that, you can use this plugin in your webpack config file.
 
 ```javascript
-const WebpackEntryFilterPlugin = require('webpack-entry-filter-plugin');
+const { WebpackEntryFilterPlugin } = require('webpack-entry-filter-plugin');
 module.exports = {
     // your webpack config
     plugins: [
-        new WebpackEntryFilterPlugin()
+        process.env.NODE_ENV === 'production' && new WebpackEntryFilterPlugin()
     ]
 }
 ```
 when you run webpack, it will only bundle the entry files that match the glob pattern.
 like the example above, it will only bundle the all pages in **live** folder and events/upgrade page;
+
+### **important**
+you should always use this plugin in dev mode。
 

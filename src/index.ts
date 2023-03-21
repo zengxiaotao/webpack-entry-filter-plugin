@@ -23,7 +23,7 @@ export class WebpackEntryFilterPlugin {
       this.includes = fs.readFileSync(localeFileName, 'utf-8')
           .split('\n')
           .filter((line) => line && !line.startsWith('#'))
-      console.log('加载到本地 entry 配置', this.includes);
+      console.log('load locale entry config file', this.includes);
     } catch (e) {
       return;
     }
